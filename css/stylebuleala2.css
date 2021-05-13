@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(246, 243, 243, 0.856);
+}
+
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: flip-card;
+}
+.item-c {
+  grid-area: main;
+}
+.item-d {
+  grid-area: side-bar;
+}
+.grid {
+  display: grid;
+  grid-template-rows: 40px 40px 600px 600;
+  grid-template-columns: 150px 150px 500px 100px;
+  grid-gap: 10px;
+  margin: 0;
+  grid-template-areas: 
+  ".split1 .split2 .split3 .split3"
+  ".split1 .bellow .split3 .split3"
+  ".flip-card .main .main .sidebar"
+  ".flip-card .main .main .sidebar";
+}
+
+header {
+  background-color: #fff;
+  color: #fff;
+  display:grid;
+  padding: 15px 15px 15px 15px;
+  width: 900px;
+  height:100px;
+}
+
+.split1 {
+  display: grid;
+  padding: 5px;
+  align-items: upper row;
+}
+
+.split2 {
+  background-color: #fff;
+  color: #fff;
+  display: grid;
+  padding: 5px;
+  box-shadow: 0 4px 4px #fff, 0.25;
+}
+
+.split3 {
+  background-color: #fff;
+  color: #fff;
+  display: grid;
+  padding: 5px;
+  box-shadow: 0 4px 4px #fff, 0.25;
+  border-radius: 5px;
+}
+
+.bellow {
+  display: grid;
+  padding: 5px;
+  border-color: #fff;
+}
+
+.text {
+  background-color: #fff;
+  color: #fff;
+  display: grid;
+  position: center;
+  padding: 100px 150px 50px 250px;
+}
+
+
+.flip-card {
+  background-color:silver;
+  width: 200px;
+  border:1px solid rgba(246, 243, 243, 0.856);
+  max-height: inherit;
+}
+
+.flip-card-inner {
+  display: flex;
+  position: relative;
+  width:2vw;
+  height: 9vh;
+  display: flex;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front {
+  display: flex;
+  position: relative;
+  width: 1vw;
+  height: 9vh;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(-180deg);
+}
+
+.flip-card-back {
+  display: flex;
+  position: relative;
+  width: 2vw;
+  height: 9vh;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(-180deg);
+  padding: 0 15px;
+}
+
+.flip-card-back {
+  background-color: rgba(246, 243, 243, 0.856);
+  color: lightgrey;
+}
+
+.task-bar {
+  background-color: #fff;
+  color: #fff;
+  display: grid;
+  position: right;
+  padding: 100px 150px 50px 250px;
+}
+
+.sidebar {
+  background-color: #fff;
+  color: #fff;
+  display: grid;
+  position:relative;
+  padding: 50px 150px 50px 250px;
+}
+
+
+
+
